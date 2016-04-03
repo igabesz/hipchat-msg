@@ -2,9 +2,9 @@ import * as request from 'request';
 import { Logger } from 'modular-log';
 export declare type MessageColors = 'yellow' | 'red' | 'green' | 'purple' | 'gray';
 export interface HipChatSettings {
-    baseUrl: string;
     room: string | number;
     auth_token: string;
+    baseUrl?: string;
     disableLogger?: boolean;
     defaultNotify?: boolean;
     defaultColor?: MessageColors;

@@ -6,12 +6,14 @@ import { Logger, createLogger } from 'modular-log';
 export type MessageColors = 'yellow' | 'red' | 'green' | 'purple' | 'gray';
 
 export interface HipChatSettings {
-	baseUrl: string;
 	room: string|number;
 	auth_token: string;
+	/// HipChat url, defaults to https://api.hipchat.com
+	baseUrl?: string;
 	disableLogger?: boolean;
 	defaultNotify?: boolean;
 	defaultColor?: MessageColors;
+	/// Format used in messages. Defaults to 'html'.
 	defaultFormat?: 'text' | 'html';
 }
 
@@ -33,6 +35,8 @@ export class HipChatNotifier {
 	url: string;
 
 	constructor(private settings: HipChatSettings) {
+		if (settings.baseUrl === undefined) settings.baseUrl = 'https://api.hipchat.com';
+		if (settings.defaultFormat === undefined) settings.defaultFormat = 'html';
 		if (!settings.disableLogger)
 			this.log = createLogger('HipChat');
 		this.url = `${settings.baseUrl}/v2/room/${settings.room}/notification?auth_token=${settings.auth_token}`;
