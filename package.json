@@ -1,0 +1,28 @@
+{
+  "name": "hipchat-msg",
+  "version": "0.0.0",
+  "description": "HipChat message sender",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igabesz/hipchat-msg.git"
+  },
+  "keywords": [
+    "hipchat",
+    "notification",
+    "message"
+  ],
+  "author": "imre.gabesz@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igabesz/hipchat-msg/issues"
+  },
+  "homepage": "https://github.com/igabesz/hipchat-msg#readme",
+  "dependencies": {
+    "modular-log": "^0.1.2",
+    "request": "^2.69.0"
+  }
+}

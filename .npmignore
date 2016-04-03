@@ -1,0 +1,8 @@
+*.js.map
+.atomignore
+.editorconfig
+typings.json
+tslint.json
+src/
+tests/
+typings/
