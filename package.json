@@ -1,13 +1,13 @@
 {
   "name": "hipchat-msg",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "HipChat message sender",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "tsc -p src",
-	"prepublish": "npm run build"
+    "build": "tsc -p src",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
