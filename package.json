@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "tsc -p src",
+	"prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,8 @@
   },
   "homepage": "https://github.com/igabesz/hipchat-msg#readme",
   "dependencies": {
-    "modular-log": "^0.1.2",
+    "@types/request": "0.0.30",
+    "modular-log": "^0.3.10",
     "request": "^2.69.0"
   }
 }
