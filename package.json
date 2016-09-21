@@ -4,6 +4,9 @@
   "description": "HipChat message sender",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "files": [
+  	"lib"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p src",
@@ -25,8 +28,10 @@
   },
   "homepage": "https://github.com/igabesz/hipchat-msg#readme",
   "dependencies": {
-    "@types/request": "0.0.30",
     "modular-log": "^0.3.10",
     "request": "^2.69.0"
+  },
+  "devDependencies": {
+  	"@types/request": "0.0.30"
   }
 }
